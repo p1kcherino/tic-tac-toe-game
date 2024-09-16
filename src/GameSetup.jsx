@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./index.css";
 
 export const GameSetup = ({ savedPlayers, onSavePlayer, onStartGame }) => {
   const [player1, setPlayer1] = useState("");
@@ -27,6 +28,7 @@ export const GameSetup = ({ savedPlayers, onSavePlayer, onStartGame }) => {
       <div>
         <label>Игрок №1: </label>
         <input
+          placeholder="Имя игрока"
           value={player1}
           onChange={(e) => setPlayer1(e.target.value)}
           list="players"
@@ -38,6 +40,7 @@ export const GameSetup = ({ savedPlayers, onSavePlayer, onStartGame }) => {
       <div>
         <label>Игрок №2: </label>
         <input
+          placeholder="Имя игрока"
           value={player2}
           onChange={(e) => setPlayer2(e.target.value)}
           list="players"
